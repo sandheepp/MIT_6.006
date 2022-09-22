@@ -2,7 +2,7 @@
 
 from asyncio import FastChildWatcher
 from dis import dis
-import queue
+from math import inf
 
 
 def add_edge(adj, src, des ):
@@ -17,7 +17,7 @@ def bfs(adj, no_of_v, src, des, pred, dist):
 
     for i in range(no_of_v):
         pred[i] = -1
-        dist[i] = 1000000
+        dist[i] = inf
 
     visited[src] = True
     dist[src] = 0
